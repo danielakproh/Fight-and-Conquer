@@ -1,7 +1,74 @@
-using System.Collections;
-using System.Linq;
-using UnityEngine;
+# class `Noise`
 
+## Purpose
+
+Generates noise map using Perlin Noise 
+
+## Definition
+
+```csharp
+    public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistence, float lacunarity, Vector2 offset);
+```
+
+ 
+## Parameters
+
+<table>
+<!-- head -->
+  <tr style="text-align: center">
+    <td><h3>Parameter<h3></td>
+    <td><h3>Type<h3></td>
+    <td><h3>Description</h3></td>
+  </tr>
+
+  <tr>
+    <td><code>mapWidth</code></td>
+    <td><code>int</code></td>
+    <td>Value representing the desired width of the noise map.</td>
+  </tr>
+  <tr>
+    <td><code>mapHeight</code></td>
+    <td><code>int</code></td>
+    <td>Value representing the desired height of the noise map.</td>
+  </tr>
+  <tr>
+    <td><code>scale</code></td>
+    <td><code>float</code></td>
+    <td>The distance between consecutive coordinates. The smaller the scale, the closer the points and the higher the resolution of the map.</td>
+  </tr>
+  <tr>
+    <td><code>octaves</code></td>
+    <td><code>int</code></td>
+    <td>Value determining the number of noise maps to overlay.</td>
+  </tr>
+  <tr>
+    <td><code>persistance</code></td>
+    <td><code>float</code></td>
+    <td>Value updating the noise height amplitude to produce a more natural result.</td>
+  </tr>
+  <tr>
+    <td><code>lacunarity</code></td>
+    <td><code>float</code></td>
+    <td>Value udpating the frequency of the noise; in other words, the number of bumps per noise map.</td>
+  </tr>
+  <tr>
+    <td><code>offset</code></td>
+    <td><code>Vector2</code></td>
+    <td>Value contributing to generate each octave at different pseudo-random positions.</td>
+  </tr>
+</table>
+
+<br>
+
+<!-- Return value  -->
+## Returns
+**float[ , ]** A 2-Dimensional array containing noise values comprised between 0 and 1.
+
+## Description
+Generates a noise map and return a grid of values between 0 and 1. (Values genrated using [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise))
+
+## Implementation
+```csharp
 public static class Noise { 
     // create grid of size width and height
     public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset) {
@@ -71,3 +138,17 @@ public static class Noise {
     }
 
 }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

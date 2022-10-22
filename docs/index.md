@@ -31,7 +31,7 @@ The requirements for this game are as follows:
 * The game will have an In-game store for allowing the player to buy assets with in-game currency
 
 
-In order to work in an organized manner, I have created this [Trello board](https://trello.com/b/9P8zADyo/fight-and-conquer) to track tasks, bugs & overall progress; feel free to check it out! 
+Checkout my [Trello board](https://trello.com/b/9P8zADyo/fight-and-conquer) for regular progress updates!
 
 ## Contributing
 
