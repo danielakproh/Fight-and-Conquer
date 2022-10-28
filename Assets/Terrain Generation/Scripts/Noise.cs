@@ -52,8 +52,8 @@ public static class Noise {
 
                     noiseMap[x, y] = noiseHeight;
 
-                    amplitude *= persistance;
-                    frequency *= lacunarity;
+                    amplitude *= persistance; // 0<=persistance<=1
+                    frequency *= lacunarity; // lacunarity>=1
                 }
 
             }
